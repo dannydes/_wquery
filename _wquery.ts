@@ -270,7 +270,7 @@ HTMLCollection.prototype.val = NodeList.prototype.val = function (val: string) {
 
 HTMLElement.prototype.is = Element.prototype.is = function (selectors: string) {
 	var elements: NodeList = $(selectors);
-	for (var i = 0; i < this.length; i++) {
+	for (var i: number = 0; i < this.length; i++) {
 		if (this === elements[i]) {
 			return true;
 		}
