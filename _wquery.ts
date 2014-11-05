@@ -421,9 +421,9 @@ HTMLCollection.prototype.toggleClass = NodeList.prototype.toggleClass = function
 	*/
 	
 	function editClassList (elements: NodeList, classes: Array, method: string) {
-    classes.foreach(function (_class) {
-      elements[method + 'Class'](_class);
-    });
+		classes.foreach(function (_class) {
+			elements[method + 'Class'](_class);
+		});
 	}
 	
 	/**
@@ -476,7 +476,7 @@ HTMLCollection.prototype.toggleClass = NodeList.prototype.toggleClass = function
  */
 
 HTMLCollection.prototype.call = NodeList.prototype.call = function (method: string, args: Array) {
-  for (var i: number = 0; i < this.length; i++) {
-    HTMLElement.prototype[method].apply(this[i], args);
-  }
+	for (var i: number = 0; i < this.length; i++) {
+		HTMLElement.prototype[method].apply(this[i], args);
+	}
 }
